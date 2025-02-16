@@ -4,7 +4,7 @@
   "settings": {
     "terminal.integrated.defaultProfile.linux": "bash",
     "editor.formatOnSave": true,
-    "python.defaultInterpreterPath": "/workspace/venv/bin/python"
+    "python.defaultInterpreterPath": "/workspaces/venv/bin/python"
   },
   "extensions": [
     "ms-python.python",
@@ -13,11 +13,11 @@
     "streetsidesoftware.code-spell-checker"
   ],
   "postCreateCommand": [
-    "python3 -m venv /workspace/venv",
-    "echo 'source /workspace/venv/bin/activate' >> ~/.bashrc",
+    "python3 -m venv /workspaces/venv",
+    "echo 'source /workspaces/venv/bin/activate' >> ~/.bashrc",
     "source ~/.bashrc",
     "pip install --upgrade pip",
-    "pip install -r requirements.txt"
+    "pip install -r /workspaces/galactic-whale/requirements.txt"
   ],
   "remoteUser": "vscode"
 }
