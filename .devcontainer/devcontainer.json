@@ -4,7 +4,7 @@
   "settings": {
     "terminal.integrated.defaultProfile.linux": "bash",
     "editor.formatOnSave": true,
-    "python.defaultInterpreterPath": "/usr/local/bin/python"
+    "python.defaultInterpreterPath": "/workspace/venv/bin/python"
   },
   "extensions": [
     "ms-python.python",
@@ -12,6 +12,9 @@
     "njpwerner.autodocstring",
     "streetsidesoftware.code-spell-checker"
   ],
-  "postCreateCommand": "pip install -r requirements.txt && python -m spacy download en_core_sci_sm",
+  "postCreateCommand": "python3 -m venv /workspace/venv && source /workspace/venv/bin/activate && pip install --upgrade pip && pip install -r requirements.txt",
   "remoteUser": "vscode"
 }
+
+
+
