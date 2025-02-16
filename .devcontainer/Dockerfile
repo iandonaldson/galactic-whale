@@ -11,5 +11,5 @@ RUN apt-get update && apt-get install -y \
 WORKDIR /workspace
 
 # Install Python Dependencies
-COPY requirements.txt /workspace/
+COPY ../requirements.txt /workspace/
 RUN pip install --no-cache-dir -r requirements.txt
