@@ -12,6 +12,6 @@
     "njpwerner.autodocstring",
     "streetsidesoftware.code-spell-checker"
   ],
-  "postCreateCommand": "pip install -r requirements.txt",
+  "postCreateCommand": "pip install -r requirements.txt && python -m spacy download en_core_sci_sm",
   "remoteUser": "vscode"
 }
