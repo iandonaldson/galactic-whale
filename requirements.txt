@@ -1,0 +1,6 @@
+spacy
+scispacy
+transformers
+pdfminer.six
+pandas
+streamlit
