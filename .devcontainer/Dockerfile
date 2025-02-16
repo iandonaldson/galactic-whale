@@ -1,7 +1,7 @@
-# Base Image
+# Use a base Python image
 FROM mcr.microsoft.com/devcontainers/python:3.9
 
-# Install System Dependencies
+# Install system dependencies
 RUN apt-get update && apt-get install -y \
     git \
     curl \
@@ -10,6 +10,3 @@ RUN apt-get update && apt-get install -y \
 # Set working directory
 WORKDIR /workspace
 
-# Install Python Dependencies
-COPY ../requirements.txt /workspace/
-RUN pip install --no-cache-dir -r requirements.txt
