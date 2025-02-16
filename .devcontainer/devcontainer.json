@@ -12,9 +12,12 @@
     "njpwerner.autodocstring",
     "streetsidesoftware.code-spell-checker"
   ],
-  "postCreateCommand": "python3 -m venv /workspace/venv && source /workspace/venv/bin/activate && pip install --upgrade pip && pip install -r requirements.txt",
+  "postCreateCommand": [
+    "python3 -m venv /workspace/venv",
+    "echo 'source /workspace/venv/bin/activate' >> ~/.bashrc",
+    "source ~/.bashrc",
+    "pip install --upgrade pip",
+    "pip install -r requirements.txt"
+  ],
   "remoteUser": "vscode"
 }
-
-
-
