@@ -1,0 +1,43 @@
+# Byte-compiled / cached files
+__pycache__/
+*.py[cod]
+*.so
+*.DS_Store
+
+# Virtual environment
+venv/
+env/
+.venv/
+
+# Logs
+logs/
+*.log
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# VSCode & Codespaces
+.vscode/
+.devcontainer/
+
+# Data files
+data/
+output/
+*.csv
+*.db
+*.sqlite
+
+# Python dependency files
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Secrets (ensure you never commit API keys or credentials)
+.env
+*.key
+*.pem
+
+# Azure Credentials (for when you integrate)
+.azure/
+
+# Streamlit cache
+.streamlit/
