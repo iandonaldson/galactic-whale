@@ -38,12 +38,6 @@ fi
 echo "Verifying installation..."
 python3 --version
 pip --version
-spacy --version
-scispacy --version
-transformers --version
-pdfminer.six --version
-pandas --version
-streamlit --version
 
 # Ensure the environment is activated in every new shell session
 echo "source $WORKSPACE_DIR/venv/bin/activate" >> ~/.bashrc
