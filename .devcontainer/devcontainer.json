@@ -1,23 +1,17 @@
 {
   "name": "Galactic Whale Dev",
-  "dockerFile": "Dockerfile",
-  "settings": {
-    "terminal.integrated.defaultProfile.linux": "bash",
-    "editor.formatOnSave": true,
-    "python.defaultInterpreterPath": "/workspaces/venv/bin/python"
+  "image": "mcr.microsoft.com/devcontainers/python:3.12",
+  "features": {
+    "ghcr.io/devcontainers/features/docker-in-docker:1": {}
   },
-  "extensions": [
-    "ms-python.python",
-    "ms-toolsai.jupyter",
-    "njpwerner.autodocstring",
-    "streetsidesoftware.code-spell-checker"
-  ],
-  "postCreateCommand": [
-    "python3 -m venv /workspaces/venv",
-    "echo 'source /workspaces/venv/bin/activate' >> ~/.bashrc",
-    "source ~/.bashrc",
-    "pip install --upgrade pip",
-    "pip install -r /workspaces/galactic-whale/requirements.txt"
-  ],
-  "remoteUser": "vscode"
+  "postCreateCommand": "bash .devcontainer/setup.sh",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-python.python",
+        "ms-toolsai.jupyter",
+        "ms-vscode-remote.remote-containers"
+      ]
+    }
+  }
 }
